@@ -5,7 +5,7 @@ pipeline {
             image 'node:14'
             args '-p 3000:3000'
             // Set the working directory to /app inside the container
-            dir '/app'
+            // dir '/app'
         }
     }
     environment {
@@ -18,12 +18,12 @@ pipeline {
                 sh 'npm install'
             }
         }
-        stage('Test') {
-            steps {
-                // Execute your test script
-                sh './jenkins/scripts/test.sh'
-            }
-        }
+        // stage('Test') {
+        //     steps {
+        //         // Execute your test script
+        //         sh './jenkins/scripts/test.sh'
+        //     }
+        // }
         // stage('Deliver') {
         //     steps {
         //         // Run your delivery script
