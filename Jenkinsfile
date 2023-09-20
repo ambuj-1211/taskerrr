@@ -10,7 +10,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Install project dependencies
-                sh 'npm install'
+                sh 'sudo npm install'
             }
         }
     }
